@@ -1,0 +1,37 @@
+p, h3{
+    margin: 0;
+    padding: 0;
+}
+ul {
+    padding-left: 0;
+}
+ul>li>ul{
+    font-size: 1.1rem;
+    padding-left: 20px;
+}
+li {
+    transition: 0.3s;
+    list-style-type: none; /* Убираем маркеры */
+    margin: 5px;
+    border-radius: 10px;
+}
+li:hover{
+    background-color:rgba(238, 238, 238, 1);
+
+}
+.container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px silver;
+    background-color:rgba(243, 243, 243, 0.4);
+    float: left;
+    font-size: 1.2rem;
+    box-shadow: -2px -2px 8px 0px rgba(0,0,0,0.75);
+}
+.container:hover{
+    transition: 0.2s;
+    background-color:rgba(243, 243, 243, 0.8);
+}
+
+
