@@ -1,8 +1,6 @@
 window.onload = function () {
     ajaxGet("http://localhost:8080/")
 };
-document.onclick = ajaxGet("http://localhost:8080/");
-
 function ajaxGet(url) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -42,6 +40,7 @@ function ajaxPost(params, url) {
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             console.log(request.response);
+            ajaxGet("http://localhost:8080/");
         }
     };
     request.open('POST', url);
@@ -50,7 +49,6 @@ function ajaxPost(params, url) {
 
 function saveShop() {
     ajaxPost(document.getElementById("shopName").value, 'http://localhost:8080/saveShop');
-    ajaxGet("http://localhost:8080/");
 }
 
 function saveProduct() {
@@ -59,7 +57,6 @@ function saveProduct() {
     let params = "productName=" + productValue + "&" + "shopId=" + shopIdValue;
 
     ajaxPost(params, 'http://localhost:8080/saveProduct');
-    ajaxGet("http://localhost:8080/");
 
 }
 
